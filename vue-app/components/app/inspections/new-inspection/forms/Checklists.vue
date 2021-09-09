@@ -6,7 +6,7 @@
                 <v-col cols="12" v-for="(item,key) in form" :key="key">
                     <v-card :style="{'border':item.error?'2px solid red':''}">
                         <v-card-text>
-                            <h2 class="font-weight-bold subtitle-1"> <span  v-if="parseInt(item.is_header) === 1">{{ key += 1 }}</span> {{ item.checklist_name }}</h2>
+                            <h2 class="font-weight-bold subtitle-1"> {{ item.checklist_name }}</h2>
                             <v-radio-group
                                 v-if="parseInt(item.is_header) === 0"
                                 @change="onChecked(item)"
