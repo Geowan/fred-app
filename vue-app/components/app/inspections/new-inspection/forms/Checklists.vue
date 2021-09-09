@@ -8,7 +8,7 @@
                         <v-card-text>
                             <h2 class="font-weight-bold subtitle-1"> <span  v-if="parseInt(item.is_header) === 1">{{ key += 1 }}</span> {{ item.checklist_name }}</h2>
                             <v-radio-group
-                                v-if="parseInt(item.is_header) === 1"
+                                v-if="parseInt(item.is_header) === 0"
                                 @change="onChecked(item)"
                                 v-model="item.marked"
                                 row
@@ -24,7 +24,7 @@
                             </v-radio-group>
                             <v-text-field-validated @input="onValueInput(item)" label="Enter comment" rules="required"
                                                     v-model="item.comment"
-                                                    v-if="item.marked==='no' && item.is_header === 1"/>
+                                                    v-if="item.marked==='no' && item.is_header === 0"/>
                         </v-card-text>
                     </v-card>
                 </v-col>
