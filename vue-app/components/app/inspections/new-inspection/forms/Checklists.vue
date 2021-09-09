@@ -94,7 +94,7 @@ export default {
             return new Promise(async (resolve, reject) => {
                 let passed = true;
                 this.form.forEach(item => {
-                    item.error = !item.marked || (item.marked === "no" && !item.comment);
+                    item.error = (item.is_header === 1) && !item.marked || (item.marked === "no" && !item.comment);
                     if (item.error) {
                         passed = false;
                     }
