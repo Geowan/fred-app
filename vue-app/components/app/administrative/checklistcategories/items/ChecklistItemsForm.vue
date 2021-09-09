@@ -22,6 +22,9 @@
                         rules="required"
                     ></v-text-field-validated>
 
+                    <v-checkbox true-value="1" false-value="0" v-model="form.is_header" label="Is header?"/>
+
+
                     <v-select-validated
                         item-text="label"
                         @change="form.fails_marked = ''"
@@ -73,6 +76,7 @@
                 mandatory:'',
                 category_id:'',
                 fails_marked:'',
+                is_header:0,
                 id:''
             },
             mandatories:[{label:"Yes",value:'yes'},{label:"No",value:'no'}],

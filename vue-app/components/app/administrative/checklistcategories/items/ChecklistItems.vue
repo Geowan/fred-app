@@ -39,6 +39,7 @@
                     <td class="caption">{{ props.item.name }}</td>
                     <td class="caption">{{ props.item.mandatory }}</td>
                     <td class="caption">{{ props.item.fails_marked }}</td>
+                    <td class="caption">{{ !!props.item.is_header?'Yes':'No' }}</td>
                    <td class="caption">
                         <v-tooltip bottom>
                             <template v-slot:activator="{ on }">
@@ -151,6 +152,7 @@
                     {text: 'Item',sortable: false,value: 'name'},
                     {text: 'Mandatory',sortable: false,value: 'mandatory'},
                     {text: 'Fails on',sortable: false,value: 'mandatory'},
+                    {text: 'IS header',sortable: false,value: 'is_header'},
                     { text: 'Action',sortable: false },
                 ]
             }

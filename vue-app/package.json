@@ -14,10 +14,12 @@
         "moment": "^2.29.1",
         "vee-validate": "^3.4.0",
         "vue": "^2.6.11",
+        "vue-json-excel": "^0.3.0",
         "vue-router": "^3.4.3",
         "vue-snotify": "^3.2.1",
         "vue-sweetalert2": "^3.0.8",
         "vuetify": "^2.2.11",
+        "vuetify-datetime-picker": "^2.1.1",
         "vuex": "^3.5.1"
     },
     "devDependencies": {

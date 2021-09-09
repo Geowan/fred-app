@@ -33,7 +33,8 @@ class ChecklistItemsController extends Controller
         $this->validate($request, [
             'category_id' => 'required',
             'mandatory' => 'required',
-            'name' => 'required'
+            'name' => 'required',
+            "is_header"=>'required'
         ]);
         return ChecklistItems::create($request->all());
     }
@@ -52,6 +53,7 @@ class ChecklistItemsController extends Controller
             'category_id' => 'required',
             'mandatory' => 'required',
             'name' => 'required',
+            "is_header"=>'required',
             'id' => 'required'
         ]);
         return ChecklistItems::where('id', $request->input("id"))
